@@ -27,7 +27,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="120dp"
+                android:layout_marginLeft="140dp"
                 android:src="@drawable/tv" />
 
             <ImageView
@@ -54,97 +54,162 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="none">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="50dp">
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/exploreChip"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Explore"
-                    app:chipCornerRadius="4dp" />
-
-                <View
-                    android:id="@+id/separator"
-                    android:layout_width="1dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#515050" />
-
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp">
+                    android:layout_height="match_parent"
+                    android:id="@+id/chipBar">
 
                     <com.google.android.material.chip.Chip
+                        android:id="@+id/exploreChip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="All"
-                        android:textStyle="bold" />
+                        android:text="Explore"
+                        app:chipIcon="@drawable/compass"
+                        app:chipCornerRadius="4dp" />
 
-                    <com.google.android.material.chip.Chip
+                    <View
+                        android:id="@+id/separator"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#515050" />
+
+                    <com.google.android.material.chip.ChipGroup
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New To you"
-                        app:chipStrokeWidth="0.2dp"
-                        app:chipStrokeColor="#FF9800"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="10dp">
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Computer Programing"
-                        android:textStyle="bold"
-                        app:chipStrokeColor="#FF9800"
-                        app:chipStrokeWidth="0.2dp" />
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All"
+                            android:textStyle="bold" />
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Computer Programing"
-                        app:chipStrokeWidth="0.2dp"
-                        app:chipStrokeColor="#777676"
-                        android:textStyle="bold" />
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New To you"
+                            android:textStyle="bold"
+                            app:chipStrokeColor="#FF9800"
+                            app:chipStrokeWidth="0.2dp" />
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Comedy"
-                        android:textStyle="bold"
-                        app:chipStrokeColor="#777676"
-                        app:chipStrokeWidth="0.2dp" />
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Computer Programming"
+                            android:textStyle="bold"
+                            app:chipStrokeColor="#FF9800"
+                            app:chipStrokeWidth="0.2dp" />
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="DIY"
-                        android:textStyle="bold"
-                        app:chipStrokeColor="#777676"
-                        app:chipStrokeWidth="0.2dp" />
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="For Child"
+                            android:textStyle="bold"
+                            app:chipStrokeColor="#777676"
+                            app:chipStrokeWidth="0.2dp" />
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Friend Youtube"
-                        android:textStyle="bold"
-                        app:chipStrokeColor="#777676"
-                        app:chipStrokeWidth="0.2dp" />
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Comedy"
+                            android:textStyle="bold"
+                            app:chipStrokeColor="#777676"
+                            app:chipStrokeWidth="0.2dp" />
 
-                </com.google.android.material.chip.ChipGroup>
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DIY"
+                            android:textStyle="bold"
+                            app:chipStrokeColor="#777676"
+                            app:chipStrokeWidth="0.2dp" />
 
-            </LinearLayout>
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Friend Youtube"
+                            android:textStyle="bold"
+                            app:chipStrokeColor="#777676"
+                            app:chipStrokeWidth="0.2dp" />
 
-        </HorizontalScrollView>
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/videoRecyclerView" />
+
+        </LinearLayout>
+
+        <!-- Yeni eklenen bileşenler -->
+        <LinearLayout
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- İçerik buraya gelecek -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/hp_homePage"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/homepage"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/hp_shorts"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/shorts"
+            />
+
+        <ImageView
+            android:id="@+id/hp_plus"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/plus"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/subs"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bookstore"/>
 
     </LinearLayout>
 
