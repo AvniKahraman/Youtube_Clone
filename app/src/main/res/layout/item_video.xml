@@ -1,15 +1,51 @@
 <!-- item_video.xml -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardviewYoutube"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="15dp"
+    android:padding="5dp"
+    android:layout_margin="3dp">
 
-<ImageView
-android:id="@+id/videoThumbnail"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:scaleType="centerCrop"
-android:adjustViewBounds="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/videothumbnail"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/videothumbnail"
+            android:layout_marginTop="5dp"
+            android:id="@+id/channel_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/videothumbnail"
+            android:layout_toEndOf="@id/channel_image"
+            android:textColor="#111111"
+            android:textSize="15dp"
+            android:id="@+id/video_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_title"
+            android:layout_alignParentEnd="true"
+            android:textColor="#451698"
+            android:id="@+id/views"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
