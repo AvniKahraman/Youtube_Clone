@@ -1,4 +1,4 @@
-<!-- item_video.xml -->
+<!--Thumnail ayarlamaca  -->
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -11,40 +11,43 @@
     android:layout_margin="3dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="408dp"
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/videothumbnail"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:id="@+id/videothumbnail"/>
+            android:layout_marginTop="10dp" />
 
         <ImageView
+            android:id="@+id/channel_image"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_below="@+id/videothumbnail"
-            android:layout_marginTop="5dp"
-            android:id="@+id/channel_image"/>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp" />
 
         <TextView
+            android:id="@+id/video_title"
             android:layout_width="wrap_content"
-            android:padding="8dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginStart="5dp"
             android:layout_below="@id/videothumbnail"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
             android:layout_toEndOf="@id/channel_image"
+            android:padding="8dp"
             android:textColor="#111111"
-            android:textSize="15dp"
-            android:id="@+id/video_title"/>
+            android:textSize="15dp" />
 
         <TextView
+            android:id="@+id/views"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/video_title"
             android:layout_alignParentEnd="true"
             android:textColor="#451698"
-            android:id="@+id/views"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
