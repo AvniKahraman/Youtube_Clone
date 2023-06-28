@@ -1,5 +1,6 @@
 package com.example.youtube;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    Subscriptions subs;
     private List<Video> videoList;
     VideoAdapter adapter;
 
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         videoList = new ArrayList<>();
 
         // ActionBar'ı gizle
@@ -106,4 +110,6 @@ public class MainActivity extends AppCompatActivity {
         Type listType = new TypeToken<ArrayList<Video>>() {}.getType();
         return gson.fromJson(json, listType);
     }
+
+
 }

@@ -64,6 +64,24 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/imageViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+
+
+
+            </LinearLayout>
+
+
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
@@ -74,22 +92,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/chipBar">
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/exploreChip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Explore"
-                        app:chipIcon="@drawable/compass"
-                        app:chipCornerRadius="4dp" />
-
-                    <View
-                        android:id="@+id/separator"
-                        android:layout_width="1dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="10dp"
-                        android:background="#515050" />
 
                     <com.google.android.material.chip.ChipGroup
                         android:layout_width="wrap_content"
@@ -105,7 +107,7 @@
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="New To you"
+                            android:text="To Day"
                             android:textStyle="bold"
                             app:chipStrokeColor="#FF9800"
                             app:chipStrokeWidth="0.2dp" />
@@ -113,7 +115,7 @@
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Computer Programming"
+                            android:text="Keep Watching"
                             android:textStyle="bold"
                             app:chipStrokeColor="#FF9800"
                             app:chipStrokeWidth="0.2dp" />
@@ -121,7 +123,7 @@
                         <com.google.android.material.chip.Chip
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="For Child"
+                            android:text="The Unfollowed"
                             android:textStyle="bold"
                             app:chipStrokeColor="#777676"
                             app:chipStrokeWidth="0.2dp" />
