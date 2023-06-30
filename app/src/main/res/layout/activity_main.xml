@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:id="@+id/avni"
         android:layout_width="match_parent"
@@ -201,9 +202,10 @@
             android:src="@drawable/plus"/>
 
         <ImageView
+            android:id="@+id/subsImageView"
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:src="@drawable/subs"/>
+            android:src="@drawable/subs" />
 
         <ImageView
             android:layout_width="80dp"

@@ -2,6 +2,9 @@ package com.example.youtube;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +26,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView subsImageView = findViewById(R.id.subsImageView);
+
+        subsImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
         videoList = new ArrayList<>();
@@ -70,21 +85,21 @@ public class MainActivity extends AppCompatActivity {
                 "    \"views\": \"411 Mn görüntüleme \"\n" +
                 "  },\n" +
                 "  {\n" +
-                "    \"id\": \"4\",\n" +
+                "    \"id\": \"6\",\n" +
                 "    \"thumbnail\": \"https://i.ytimg.com/vi/ZEmITxF4OVo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxU7M1aeAmNFGypgQWWWwVcDhppg\",\n" +
                 "    \"channel_image\": \"https://yt3.ggpht.com/ytc/AGIKgqM6LL7VphGww0IIZsBxXUmNK_GdNoX6IeFfBb8Z=s48-c-k-c0x00ffffff-no-rj\",\n" +
                 "    \"video_title\": \"Turkish street food, BEST in the WORLD?\",\n" +
                 "    \"views\": \"185 B görüntüleme  2 hafta önce \"\n" +
                 "  },\n" +
                 "  {\n" +
-                "    \"id\": \"5\",\n" +
+                "    \"id\": \"7\",\n" +
                 "    \"thumbnail\": \"https://i.ytimg.com/vi/2nCs6ve4zw4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAE8UnIUC5LfoF7BjZDQsMsBk-lgw\",\n" +
                 "    \"channel_image\": \"https://yt3.ggpht.com/gBc1Jr4U2SRTOToaaVFdvUbqxcI8L6eQciewD9UD9uKTxJDoGMmlDbhLjm_d3-e__iap4ov5gxc=s48-c-k-c0x00ffffff-no-rj\",\n" +
                 "    \"video_title\": \"SAVUNMASIZ ASTRAL! | Goose Goose Duck\",\n" +
                 "    \"views\": \"9,6 B görüntüleme  17 saat önce \"\n" +
                 "  },\n" +
                 "  {\n" +
-                "    \"id\": \"5\",\n" +
+                "    \"id\": \"8\",\n" +
                 "    \"thumbnail\": \"https://i.ytimg.com/vi/942WjgyhF1s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrV_OEHYObSayOv2G0K9mNQr5JPg\",\n" +
                 "    \"channel_image\": \"https://yt3.ggpht.com/niNLmP3Zy1ea_DizNDv7x8eWak6nNKt6t46R6w6ZtkRzEMsnMLRugloSLYHq519cGdu3bz_tKg=s48-c-k-c0x00ffffff-no-rj\",\n" +
                 "    \"video_title\": \"Leyla ile Mecnun 5. Bölüm\",\n" +
@@ -110,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         Type listType = new TypeToken<ArrayList<Video>>() {}.getType();
         return gson.fromJson(json, listType);
     }
+
 
 
 }
