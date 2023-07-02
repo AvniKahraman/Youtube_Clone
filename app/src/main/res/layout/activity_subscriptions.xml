@@ -65,32 +65,29 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
+            <HorizontalScrollView
+                android:id="@+id/horizonscrollViewSubs"
                 android:layout_width="match_parent"
-                android:layout_height="63dp">
+                android:layout_height="63dp"
+                android:scrollbars="none">
 
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/imageViewPager"
+
+
+            <LinearLayout
+                android:id="@+id/imageViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleViewSubs"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent" />
 
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/subRecyclerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="3dp"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                        </LinearLayout>
 
-
-                </androidx.viewpager.widget.ViewPager>
-
-
-
-
-
-
-            </LinearLayout>
+                    </HorizontalScrollView>
 
 
             <HorizontalScrollView
@@ -214,6 +211,7 @@
             android:src="@drawable/plus"/>
 
         <ImageView
+            android:id="@+id/subsImageView1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:src="@drawable/subs"/>

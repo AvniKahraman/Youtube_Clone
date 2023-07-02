@@ -8,6 +8,7 @@
     import android.os.Bundle;
     import android.view.View;
     import android.widget.ImageView;
+    import android.widget.LinearLayout;
 
     import com.google.gson.Gson;
     import com.google.gson.reflect.TypeToken;
@@ -24,11 +25,12 @@
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_subscriptions);
 
-            ImageView subsImageView = findViewById(R.id.subsImageView);
+            ImageView homeImageView = findViewById(R.id.hp_homePage);
 
-            subsImageView.setOnClickListener(new View.OnClickListener() {
+
+            homeImageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Subscriptions.this, MainActivity.class);
@@ -43,6 +45,9 @@
             if (getSupportActionBar() != null) {
                 getSupportActionBar().hide();
             }
+
+
+
 
             // JSON verilerini oku
             String json = "[\n" +
@@ -82,21 +87,21 @@
                     "    \"views\": \"411 Mn görüntüleme \"\n" +
                     "  },\n" +
                     "  {\n" +
-                    "    \"id\": \"4\",\n" +
+                    "    \"id\": \"6\",\n" +
                     "    \"thumbnail\": \"https://i.ytimg.com/vi/ZEmITxF4OVo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxU7M1aeAmNFGypgQWWWwVcDhppg\",\n" +
                     "    \"channel_image\": \"https://yt3.ggpht.com/ytc/AGIKgqM6LL7VphGww0IIZsBxXUmNK_GdNoX6IeFfBb8Z=s48-c-k-c0x00ffffff-no-rj\",\n" +
                     "    \"video_title\": \"Turkish street food, BEST in the WORLD?\",\n" +
                     "    \"views\": \"185 B görüntüleme  2 hafta önce \"\n" +
                     "  },\n" +
                     "  {\n" +
-                    "    \"id\": \"5\",\n" +
+                    "    \"id\": \"7\",\n" +
                     "    \"thumbnail\": \"https://i.ytimg.com/vi/2nCs6ve4zw4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAE8UnIUC5LfoF7BjZDQsMsBk-lgw\",\n" +
                     "    \"channel_image\": \"https://yt3.ggpht.com/gBc1Jr4U2SRTOToaaVFdvUbqxcI8L6eQciewD9UD9uKTxJDoGMmlDbhLjm_d3-e__iap4ov5gxc=s48-c-k-c0x00ffffff-no-rj\",\n" +
                     "    \"video_title\": \"SAVUNMASIZ ASTRAL! | Goose Goose Duck\",\n" +
                     "    \"views\": \"9,6 B görüntüleme  17 saat önce \"\n" +
                     "  },\n" +
                     "  {\n" +
-                    "    \"id\": \"5\",\n" +
+                    "    \"id\": \"8\",\n" +
                     "    \"thumbnail\": \"https://i.ytimg.com/vi/942WjgyhF1s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrV_OEHYObSayOv2G0K9mNQr5JPg\",\n" +
                     "    \"channel_image\": \"https://yt3.ggpht.com/niNLmP3Zy1ea_DizNDv7x8eWak6nNKt6t46R6w6ZtkRzEMsnMLRugloSLYHq519cGdu3bz_tKg=s48-c-k-c0x00ffffff-no-rj\",\n" +
                     "    \"video_title\": \"Leyla ile Mecnun 5. Bölüm\",\n" +
@@ -104,18 +109,22 @@
                     "  }\n" +
                     "]";
 
-
-
             videoList = parseJson(json);
 
             // RecyclerView ve VideoAdapter ayarlarını yap
             RecyclerView recyclerView = findViewById(R.id.videoRecyclerView);
+            RecyclerView recyclerView1 = findViewById(R.id.recycleViewSubs);
             LinearLayoutManager layoutManager = new LinearLayoutManager(this);
             recyclerView.setLayoutManager(layoutManager);
+            recyclerView1.setLayoutManager(layoutManager);
 
             adapter = new SubsVideoAdapter(videoList, Subscriptions.this);
             recyclerView.setAdapter(adapter);
+            recyclerView1.setAdapter(adapter);
         }
+
+
+
 
         private List<subsVideo> parseJson(String json) {
             Gson gson = new Gson();

@@ -17,17 +17,18 @@ import java.util.List;
 
 public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.ViewHolder> {
 
-    private List<subsVideo> videoList;
+    private List<subsVideo> videoList1;
     private Context context;
 
     public SubsVideoAdapter(List<subsVideo> videoList, Context context) {
-        this.videoList = videoList;
+        this.videoList1 = videoList;
         this.context = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_video, parent, false);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(layoutParams);
@@ -37,7 +38,7 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        subsVideo video = videoList.get(position);
+        subsVideo video = videoList1.get(position);
         holder.video_title.setText(video.getVideo_title());
         holder.views.setText(video.getViews());
         Picasso.get().load(video.getChannel_image()).into(holder.channel_image);
@@ -47,11 +48,11 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
 
     @Override
     public int getItemCount() {
-        return videoList.size();
+        return videoList1.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView thumbnailImageView, channel_image;
+        public ImageView thumbnailImageView, channel_image,chanel_subs;
         public TextView video_title, views;
 
         public ViewHolder(@NonNull View itemView) {
@@ -60,6 +61,8 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
             channel_image = itemView.findViewById(R.id.channel_image);
             video_title = itemView.findViewById(R.id.video_title);
             views = itemView.findViewById(R.id.views);
+            chanel_subs = itemView.findViewById(R.id.chanel_subs);
+
         }
     }
 }
