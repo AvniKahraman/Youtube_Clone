@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.LinearLayout;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,8 +34,13 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(layoutParams);
         ViewHolder viewHolder = new ViewHolder(view);
+
         return viewHolder;
+
     }
+
+
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -44,6 +50,9 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
         Picasso.get().load(video.getChannel_image()).into(holder.channel_image);
         Picasso.get().load(video.getThumbnail()).into(holder.thumbnailImageView);
 
+
+
+
     }
 
     @Override
@@ -52,7 +61,7 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView thumbnailImageView, channel_image,chanel_subs;
+        public ImageView thumbnailImageView, channel_image;
         public TextView video_title, views;
 
         public ViewHolder(@NonNull View itemView) {
@@ -61,7 +70,8 @@ public class SubsVideoAdapter extends RecyclerView.Adapter<SubsVideoAdapter.View
             channel_image = itemView.findViewById(R.id.channel_image);
             video_title = itemView.findViewById(R.id.video_title);
             views = itemView.findViewById(R.id.views);
-            chanel_subs = itemView.findViewById(R.id.chanel_subs);
+
+
 
         }
     }
