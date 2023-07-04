@@ -1,6 +1,7 @@
     package com.example.youtube;
 
     import androidx.appcompat.app.AppCompatActivity;
+    import androidx.recyclerview.widget.GridLayoutManager;
     import androidx.recyclerview.widget.LinearLayoutManager;
     import androidx.recyclerview.widget.RecyclerView;
 
@@ -122,29 +123,61 @@
                     "  {\n" +
                     "    \"id\": \"2\",\n" +
                     "    \"channel_subs\": \"https://yt3.googleusercontent.com/ytc/AGIKgqN1F5HXRCFl48NA5bwfOJsdLakGKcwyJrcZ31fkGQ=s88-c-k-c0x00ffffff-no-rj-mo\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"3\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/gBc1Jr4U2SRTOToaaVFdvUbqxcI8L6eQciewD9UD9uKTxJDoGMmlDbhLjm_d3-e__iap4ov5gxc=s48-c-k-c0x00ffffff-no-rj\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"4\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/ytc/AGIKgqO1WJO2Y4SHbpqszoQ1Vz3Re6KFgI0b8eUKK--f6A=s68-c-k-c0x00ffffff-no-rj\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"9\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/Y9ChdQ3aURwGsAYEQsDGfSpyLmPz55Dvk46UkencQzU3QGF0FA6pWl8ddX5iTfpXfY6GBPb6EA=s68-c-k-c0x00ffffff-no-rj\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"5\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/sjw3p8Guc0-L8yYpDvvsOCSgzwvZ5FPHrkRqVLMx2Hk1aSN0AZQMF4IRqkaunho80CkfY7cCHl4=s68-c-k-c0x00ffffff-no-rj\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"6\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/WMHxmJ-ZFQTIV9HU6fbLYiDX0mqKy40GAey0yrBxVQCrvQegf2gWNto9pxlbHQdXfPTgjUp0=s68-c-k-c0x00ffffff-no-rj\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"7\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/5otgPapAigujfiDJfAI5SX1AmcKKZ-KBiXywcuGQw_xyGV0R0zH1_SNBSjYyjWIobY0f9cAF=s68-c-k-c0x00ffffff-no-rj-mo\"\n" +
+                    "  },\n" +
+                    "  {\n" +
+                    "    \"id\": \"8\",\n" +
+                    "    \"channel_subs\": \"https://yt3.ggpht.com/FgOab_l7ofOLZjoNWYw-bfAbgRXPDd4oVeAwtDnB98AAR2IDwPfBiqPiX5OPC5z3EG5hCsKEgmM=s48-c-k-c0x00ffffff-no-rj\"\n" +
                     "  }\n" +
                     "]";
+
+
 
             System.out.println(videoList2);
             videoList2 = parseChannelJson(json2);
             videoList = parseJson(json);
 
             // RecyclerView ve VideoAdapter ayarlarını yap
-            RecyclerView recyclerView = findViewById(R.id.videoRecyclerView);
+
             RecyclerView recyclerView1 = findViewById(R.id.recycleViewSubs);
-
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-
-            LinearLayoutManager layoutManager1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-
-            recyclerView.setLayoutManager(layoutManager);
+            GridLayoutManager layoutManager1 = new GridLayoutManager(this, 9); // İki sütunlu bir düzen kullanılacak
             recyclerView1.setLayoutManager(layoutManager1);
-
-            adapter = new SubsVideoAdapter(videoList, Subscriptions.this);
-            adapter1= new subsAdapter(videoList2,Subscriptions.this);
-
-            recyclerView.setAdapter(adapter);
+            adapter1 = new subsAdapter(videoList2, Subscriptions.this);
             recyclerView1.setAdapter(adapter1);
+            recyclerView1.setNestedScrollingEnabled(false); // Dikey kaydırmayı devre dışı bırakma
+
+
+
+
+            RecyclerView recyclerView = findViewById(R.id.videoRecyclerView);
+            LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+            recyclerView.setLayoutManager(layoutManager);
+            adapter = new SubsVideoAdapter(videoList, Subscriptions.this);
+            recyclerView.setAdapter(adapter);
+
 
         }
 
