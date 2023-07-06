@@ -26,8 +26,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+            ImageView bookstore = findViewById(R.id.bookstore);
         ImageView subsImageView = findViewById(R.id.subsImageView);
+
+        bookstore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Bookstore.class);
+                startActivity(intent);
+            }
+        });
 
         subsImageView.setOnClickListener(new View.OnClickListener() {
             @Override
