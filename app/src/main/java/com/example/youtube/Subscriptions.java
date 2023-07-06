@@ -59,31 +59,31 @@
             String json = "[\n" +
                     "  {\n" +
                     "    \"id\": \"1\",\n" +
-                    "    \"thumbnail\": \"https://i.ytimg.com/vi/eOKrWpaG5kk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACNn_vLR2jnr2hPPk2Lpm1hcHvdg\",\n" +
-                    "    \"channel_image\": \"https://yt3.googleusercontent.com/ytc/AGIKgqN1F5HXRCFl48NA5bwfOJsdLakGKcwyJrcZ31fkGQ=s88-c-k-c0x00ffffff-no-rj-mo\",\n" +
-                    "    \"video_title\": \"Survival Of The Thickest | Official Trailer | Netflix\",\n" +
-                    "    \"views\": \"144 B görüntüleme\"\n" +
+                    "    \"thumbnail\": \"https://i.ytimg.com/vi/X8bod1bqOHg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDlyPC1x1sZQuMfaCQxjQRETUiF4w\",\n" +
+                    "    \"channel_image\": \"https://yt3.ggpht.com/gM7OVc0oGNJg_NtopPt-pcfeO9ybGN_fKpFUwWY3aod411c9pxWIQG5Vr5CntxMhe5MvHCs3GA=s48-c-k-c0x00ffffff-no-rj\",\n" +
+                    "    \"video_title\": \"18 Bin Kilometrede 1998 Model Fiat Tempra\",\n" +
+                    "    \"views\": \"1 Mn görüntüleme  1 yıl önce\"\n" +
                     "  },\n" +
                     "  {\n" +
                     "    \"id\": \"2\",\n" +
-                    "    \"thumbnail\": \"https://i.ytimg.com/vi/5agNtt0DtL0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByrFYPOmeAshVv31e5b5-_ChoJ7Q\",\n" +
-                    "    \"channel_image\": \"https://yt3.ggpht.com/QMgD-AL-noOFuYObY4khETLrHZiU1V6mBMARiZa6EYL1d0D7vo2CViqvWX_hn90nb0E8cx3kjQ=s48-c-k-c0x00ffffff-no-rj\",\n" +
-                    "    \"video_title\": \"Kayıp Denizaltı Gizemi | Derindeki Gizem\",\n" +
-                    "    \"views\": \"52 B görüntüleme\"\n" +
+                    "    \"thumbnail\": \"https://i.ytimg.com/vi/JlvY3-3Gork/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIE8oRzAP&rs=AOn4CLBqpNSiWgcGapGKq8njI6ScVKsiZA\",\n" +
+                    "    \"channel_image\": \"https://yt3.ggpht.com/ixRLR3PzS9EXSZMThJ592UriyT5T8D0zYMw3ckuOglR62jym8EYWmp2lDBpeDi-DfyqDV6hych0=s48-c-k-c0x00ffffff-no-rj\",\n" +
+                    "    \"video_title\": \"#ZaferMeclise mülteciler evine! | Prof. Dr. Ümit Özdağ | Zafer Partisi\",\n" +
+                    "    \"views\": \"2,9 B görüntüleme  1 ay önce\"\n" +
                     "  },\n" +
                     "  {\n" +
                     "    \"id\": \"3\",\n" +
-                    "    \"thumbnail\": \"https://i.ytimg.com/vi/FYcptmGFF6E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2UktDviTQe5rR2-jYo-WZKrQw6A\",\n" +
-                    "    \"channel_image\": \"https://yt3.ggpht.com/FgOab_l7ofOLZjoNWYw-bfAbgRXPDd4oVeAwtDnB98AAR2IDwPfBiqPiX5OPC5z3EG5hCsKEgmM=s48-c-k-c0x00ffffff-no-rj\",\n" +
-                    "    \"video_title\": \"Mesut Süre İle İlişki Testi | #13 Dilan Bayır Polat & Fazlı Polat\",\n" +
-                    "    \"views\": \"2,4 Mn görüntüleme\"\n" +
+                    "    \"thumbnail\": \"https://i.ytimg.com/vi/l-IAz-s0rno/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9Jnb3mjw_0mwllgZHBbZwiaXOjQ\",\n" +
+                    "    \"channel_image\": \"https://yt3.googleusercontent.com/WMHxmJ-ZFQTIV9HU6fbLYiDX0mqKy40GAey0yrBxVQCrvQegf2gWNto9pxlbHQdXfPTgjUp0=s176-c-k-c0x00ffffff-no-rj\",\n" +
+                    "    \"video_title\": \"DÜNYAYI ŞAŞIRTAN TÜRK PİLOT! \uD83D\uDE31- ARMA 3 w/@CaglarArtsLtd @Burhi\",\n" +
+                    "    \"views\": \"49 B görüntüleme  17 saat önce\"\n" +
                     "  },\n" +
                     "  {\n" +
                     "    \"id\": \"4\",\n" +
-                    "    \"thumbnail\": \"https://i.ytimg.com/vi/gy1B3agGNxw/hq720.jpg?sqp=-oaymwE2COgCEMoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBvgeAAtAFigIMCAAQARg4IDYofzAP&rs=AOn4CLCvmDhZt19TBBrZ8sc2-BI9u6ezYg\",\n" +
-                    "    \"channel_image\": \"https://yt3.ggpht.com/ytc/AGIKgqNqhtcKenlUQ500vTEDWgH2ej_MT7MZfO09MVJQhg=s48-c-k-c0x00ffffff-no-rj\",\n" +
-                    "    \"video_title\": \"Epic Sax Guy [Original] [HD]\",\n" +
-                    "    \"views\": \"85 Mn görüntüleme\"\n" +
+                    "    \"thumbnail\": \"https://i.ytimg.com/vi/xNbge2jXUBk/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD38Z4trpg7yN_9dIhXJhNLQOd4oA\",\n" +
+                    "    \"channel_image\": \"https://yt3.ggpht.com/sjw3p8Guc0-L8yYpDvvsOCSgzwvZ5FPHrkRqVLMx2Hk1aSN0AZQMF4IRqkaunho80CkfY7cCHl4=s176-c-k-c0x00ffffff-no-rj-mo\",\n" +
+                    "    \"video_title\": \"EXTRACTION 2 - ELEŞTİREL PARODİ\",\n" +
+                    "    \"views\": \"160 B görüntüleme  1 gün önce\"\n" +
                     "  },\n" +
                     "  {\n" +
                     "    \"id\": \"5\",\n" +
@@ -94,10 +94,10 @@
                     "  },\n" +
                     "  {\n" +
                     "    \"id\": \"6\",\n" +
-                    "    \"thumbnail\": \"https://i.ytimg.com/vi/ZEmITxF4OVo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxU7M1aeAmNFGypgQWWWwVcDhppg\",\n" +
-                    "    \"channel_image\": \"https://yt3.ggpht.com/ytc/AGIKgqM6LL7VphGww0IIZsBxXUmNK_GdNoX6IeFfBb8Z=s48-c-k-c0x00ffffff-no-rj\",\n" +
-                    "    \"video_title\": \"Turkish street food, BEST in the WORLD?\",\n" +
-                    "    \"views\": \"185 B görüntüleme  2 hafta önce\"\n" +
+                    "    \"thumbnail\": \"https://i.ytimg.com/vi/fwfFSYH1330/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD53TBPRKIjOBlfQinUr_I37gtAXQ\",\n" +
+                    "    \"channel_image\": \"https://yt3.ggpht.com/gBc1Jr4U2SRTOToaaVFdvUbqxcI8L6eQciewD9UD9uKTxJDoGMmlDbhLjm_d3-e__iap4ov5gxc=s48-c-k-c0x00ffffff-no-rj\",\n" +
+                    "    \"video_title\": \"NİNJANIN HÜNERLERİ! | Goose Goose Duck [YOUTUBE ÖZEL]\",\n" +
+                    "    \"views\": \"18 B görüntüleme  1 gün önce\"\n" +
                     "  },\n" +
                     "  {\n" +
                     "    \"id\": \"7\",\n" +
