@@ -35,15 +35,25 @@
             setContentView(R.layout.activity_subscriptions);
 
             ImageView homeImageView = findViewById(R.id.hp_homePage);
+            ImageView bookstore = findViewById(R.id.bookstore);
 
+            bookstore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Subscriptions.this, Bookstore.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+            });
 
             homeImageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(Subscriptions.this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                });
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Subscriptions.this, MainActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
+                }
+            });
 
             videoList = new ArrayList<>();
 

@@ -1,3 +1,4 @@
+
 package com.example.youtube;
 
 import android.content.Intent;
@@ -16,6 +17,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
 
     Subscriptions subs;
@@ -26,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-            ImageView bookstore = findViewById(R.id.bookstore);
+        ImageView bookstore = findViewById(R.id.bookstore);
         ImageView subsImageView = findViewById(R.id.subsImageView);
-
         bookstore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Bookstore.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
             }
         });
 
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Subscriptions.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right );
             }
         });
 
@@ -134,6 +137,6 @@ public class MainActivity extends AppCompatActivity {
         return gson.fromJson(json, listType);
     }
 
-
+   
 
 }
