@@ -56,52 +56,221 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="40dp"
+
         android:orientation="horizontal">
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="40dp"
-           android:clickable="true"
-           android:id="@+id/historyBar">
 
-           <ImageView
-               android:id="@+id/past"
-               android:layout_width="30dp"
-               android:layout_height="match_parent"
-               android:layout_marginStart="10dp"
-               android:src="@drawable/history"/>
+        <LinearLayout
+            android:id="@+id/historyBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true">
 
-           <TextView
-               android:layout_width="60dp"
-               android:layout_height="match_parent"
-               android:layout_marginStart="10dp"
-               android:text="History"
-               android:gravity="center_vertical"
-               android:textStyle="bold"
-               android:textSize="17dp"
-               android:textColor="@color/black"/>
+            <ImageView
+                android:id="@+id/past"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/history" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="match_parent"
-        android:text="View All"
-        android:layout_marginStart="230dp"
-        android:gravity="center_vertical"
-        android:textStyle="bold"
-        android:textColor="#0D7CD5"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="230dp"
+                android:gravity="center_vertical"
+                android:text="View All"
+                android:textColor="#0D7CD5"
+                android:textStyle="bold" />
 
-       </LinearLayout>
-
+        </LinearLayout>
 
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="580dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalbook"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleviewpast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="410dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#515050" />
+
+
+            <LinearLayout
+                android:id="@+id/playlistbar"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/playlist"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/playlist"/>
+
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Playlist"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="230dp"
+                    android:gravity="center_vertical"
+                    android:text="View All"
+                    android:textColor="#0D7CD5"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalbooks"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleviewplaylist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/separators"
+                android:layout_width="410dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="#515050" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/yourVideos"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/dowlad" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center_vertical"
+                    android:text="Your Videos"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/download"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/download1" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:gravity="center_vertical"
+                    android:text="Downloads"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        android:gravity="bottom">
 
         <ImageView
             android:id="@+id/hp_homePage"
@@ -137,4 +306,13 @@
 
     </LinearLayout>
 
+
 </LinearLayout>
+
+
+
+
+
+
+
+
