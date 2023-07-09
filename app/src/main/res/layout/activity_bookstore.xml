@@ -266,31 +266,31 @@
         </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/altbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_gravity="bottom"
-        android:layout_weight="0"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/hp_homePage"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:src="@drawable/homepage"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp" />
 
         <ImageView
             android:id="@+id/hp_shorts"
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:src="@drawable/shorts"
-            />
+            android:src="@drawable/shorts" />
 
         <ImageView
             android:id="@+id/hp_plus"
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:src="@drawable/plus"/>
+            android:src="@drawable/plus" />
 
         <ImageView
             android:id="@+id/subsImageView"
@@ -302,9 +302,10 @@
             android:id="@+id/bookstore"
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:src="@drawable/bookstore"/>
+            android:src="@drawable/bookstore" />
 
     </LinearLayout>
+
 
 
 </LinearLayout>
