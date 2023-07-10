@@ -12,23 +12,44 @@
 
 
     <RelativeLayout
-        android:layout_width="408dp"
-        android:layout_height="wrap_content">
+        android:layout_width="130dp"
+        android:layout_height="100dp">
 
         <ImageView
-            android:id="@+id/bookstorevido"
+            android:id="@+id/bookstorethumbnail"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="70dp"
             android:layout_marginTop="10dp" />
 
 
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+                android:layout_below="@id/bookstorethumbnail"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+
+            android:padding="8dp"
+            android:textColor="#111111"
+            android:textSize="15dp" />
 
 
-
-
-
-
+        <TextView
+            android:id="@+id/bookvideo"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@id/bookstorethumbnail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="129dp"
+            android:padding="8dp"
+            android:textColor="#111111"
+            android:textSize="15dp" />
 
     </RelativeLayout>
+
 
 </androidx.cardview.widget.CardView>

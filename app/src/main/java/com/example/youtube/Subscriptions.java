@@ -21,7 +21,7 @@
     public class Subscriptions extends AppCompatActivity {
 
         Subscriptions subs;
-        private  List<subs_channel> videoList2;
+            private  List<subs_channel> videoList2;
         private List<subsVideo> videoList;
 
 
