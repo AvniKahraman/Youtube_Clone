@@ -49,7 +49,7 @@ public class subsAdapter extends RecyclerView.Adapter<subsAdapter.ViewHolder> {
         return videoList1.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public CircleImageView chanel_subs;
 

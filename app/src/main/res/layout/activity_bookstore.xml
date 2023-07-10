@@ -116,6 +116,7 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleviewpast"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="3dp"
@@ -128,13 +129,13 @@
                 android:id="@+id/separator"
                 android:layout_width="410dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:background="#515050" />
 
 
             <LinearLayout
                 android:id="@+id/playlistbar"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:clickable="true">
@@ -179,6 +180,7 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleviewplaylist"
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="3dp"
@@ -198,7 +200,7 @@
 
             <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
@@ -250,6 +252,63 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filmbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/film"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Your Films"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:id="@+id/patato">
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/makas"/>
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="30dp"
+                        android:gravity="center_vertical"
+                        android:text="Your Clips"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"/>
+
+
+
+
+                </LinearLayout>
+
+
 
         </LinearLayout>
 
