@@ -24,14 +24,14 @@ public class Bookstore_past_Adapter extends RecyclerView.Adapter<Bookstore_past_
         this.videoList1 = videoList;
         this.context = context;
     }
-
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Bookstore_past_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bookstore_pong, parent, false);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(layoutParams);
-        return new ViewHolder(view);
+        Bookstore_past_Adapter.ViewHolder viewHolder = new Bookstore_past_Adapter.ViewHolder(view);
+        return viewHolder;
     }
 
     @Override
