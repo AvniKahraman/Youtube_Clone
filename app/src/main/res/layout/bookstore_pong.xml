@@ -12,28 +12,27 @@
 
 
     <RelativeLayout
-        android:layout_width="130dp"
-        android:layout_height="100dp">
+        android:layout_width="150dp"
+        android:layout_height="120dp">
 
         <ImageView
             android:id="@+id/bookstorethumbnail"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"/>
 
 
         <TextView
             android:id="@+id/video_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-                android:layout_below="@id/bookstorethumbnail"
+            android:layout_below="@id/bookstorethumbnail"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="7dp"
-
+            android:layout_marginTop="3dp"
             android:padding="8dp"
             android:textColor="#111111"
-            android:textSize="15dp" />
+            android:textSize="10dp" />
 
 
         <TextView

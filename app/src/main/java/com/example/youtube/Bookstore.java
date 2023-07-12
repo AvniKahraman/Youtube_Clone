@@ -1,11 +1,15 @@
 package com.example.youtube;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -20,6 +24,8 @@ public class Bookstore extends AppCompatActivity {
     private List<BookStore_video> videoList;
     private Bookstore_past_Adapter adapter;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,54 @@ public class Bookstore extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
+        LinearLayout historyBar = findViewById(R.id.historyBar);
+        LinearLayout playlistbar = findViewById(R.id.playlistbar);
+        LinearLayout yourVideos = findViewById(R.id.yourVideos);
+        LinearLayout download= findViewById(R.id.download);
+        LinearLayout filmbar = findViewById(R.id.filmbar);
+        LinearLayout patato = findViewById(R.id.patato); 
+
+        historyBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Bookstore.this, "HistoryBar", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        playlistbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Bookstore.this, "Playlistbar", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        yourVideos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Bookstore.this, "Your Videos", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Bookstore.this, "Downloads", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        filmbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Bookstore.this, "FilmBar", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        patato.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Bookstore.this, "Your Clips", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         videoList = new ArrayList<>();
 
