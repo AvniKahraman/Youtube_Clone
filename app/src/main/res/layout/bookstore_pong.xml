@@ -32,13 +32,14 @@
             android:layout_marginTop="3dp"
             android:padding="8dp"
             android:textColor="#111111"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:maxLines="1" />
 
 
         <TextView
             android:id="@+id/bookvideo"
             android:layout_width="wrap_content"
-            android:layout_height="18dp"
+            android:layout_height="11dp"
             android:layout_below="@id/bookstorethumbnail"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="5dp"

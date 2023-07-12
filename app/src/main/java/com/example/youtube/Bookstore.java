@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -41,7 +42,31 @@ public class Bookstore extends AppCompatActivity {
         LinearLayout yourVideos = findViewById(R.id.yourVideos);
         LinearLayout download= findViewById(R.id.download);
         LinearLayout filmbar = findViewById(R.id.filmbar);
-        LinearLayout patato = findViewById(R.id.patato); 
+        LinearLayout patato = findViewById(R.id.patato);
+        ImageView subsImageView = findViewById(R.id.subsImageView);
+        ImageView hp_homePage = findViewById(R.id.hp_homePage);
+
+
+
+        hp_homePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Bookstore.this,MainActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+            }
+        });
+
+        subsImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Bookstore.this,Subscriptions.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
+
+            }
+        });
 
         historyBar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +116,8 @@ public class Bookstore extends AppCompatActivity {
                 "  {\n" +
                 "    \"id\": \"1\",\n" +
                 "    \"bookstorethumbnail\": \"https://i.ytimg.com/vi/X8bod1bqOHg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDlyPC1x1sZQuMfaCQxjQRETUiF4w\",\n" +
-                "    \"video_title\": \"18 Bin Kilometrede 1998 Model Fiat Tempra\"\n" +
+                "    \"video_title\": \"18 Bin Kilometrede 1998 Model Fiat Tempra\",\n" + // Burada bir virgül eklendi
+                "    \"bookvideo\": \"jaho\"\n" +
                 "  },\n" +
                 "  {\n" +
                 "    \"id\": \"2\",\n" +
