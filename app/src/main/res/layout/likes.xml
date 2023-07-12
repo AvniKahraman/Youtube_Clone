@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="15dp"
+    android:padding="5dp"
+    android:layout_margin="3dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/likesimage"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"/>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/likesimage"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="75dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/like2"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/likesimage"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="57dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="5000"
+                android:textSize="9dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/likesimage"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:padding="8dp"
+            android:textColor="#111111"
+            android:textSize="9dp"
+            android:maxLines="1"
+            android:text="My Favorite videos"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

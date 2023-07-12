@@ -22,8 +22,11 @@ import java.util.List;
 
 public class Bookstore extends AppCompatActivity {
 
+
+    private List<likesvideo> videoList2;
     private List<BookStore_video> videoList;
     private Bookstore_past_Adapter adapter;
+    private bookstore_videoAdapter adapter1;
 
 
 
@@ -157,7 +160,16 @@ public class Bookstore extends AppCompatActivity {
                 "]";
 
 
+        String json2 = "[\n" +
+                "  {\n" +
+                "    \"id\": \"8\",\n" +
+                "    \"likesimage\": \"https://i.ytimg.com/vi/942WjgyhF1s/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrV_OEHYObSayOv2G0K9mNQr5JPg\"\n" +
+                "  }\n" +
+                "]";
+
+
         videoList = parseJson(json);
+        videoList2 = parseChannelJson(json2);
         adapter = new Bookstore_past_Adapter(videoList, this);
 
         RecyclerView recyclerView1 = findViewById(R.id.recycleviewpast);
@@ -166,7 +178,25 @@ public class Bookstore extends AppCompatActivity {
         adapter = new Bookstore_past_Adapter(videoList,Bookstore.this);
         recyclerView1.setAdapter(adapter);
         recyclerView1.setNestedScrollingEnabled(false); // Dikey kaydırmayı devre dışı bırakma
+
+
+        RecyclerView recyclerView = findViewById(R.id.recycleviewplaylist);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 1); // İki sütunlu bir düzen kullanılacak
+        recyclerView.setLayoutManager(layoutManager);
+        adapter1 = new bookstore_videoAdapter(videoList2, Bookstore.this);
+        recyclerView.setAdapter(adapter1);
+        recyclerView.setNestedScrollingEnabled(false); // Dikey kaydırmayı devre dışı bırakma
+
+
+
     }
+
+    private List<likesvideo> parseChannelJson(String json2) {
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<likesvideo>>() {}.getType();
+        return gson.fromJson(json2, listType);
+    }
+
 
     private List<BookStore_video> parseJson(String json) {
         Gson gson = new Gson();
