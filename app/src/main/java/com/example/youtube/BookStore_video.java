@@ -5,15 +5,6 @@ public class BookStore_video {
     String bookstorethumbnail;
     String bookvideo;
     String video_title;
-    String likesimage;
-
-    public String getLikesimage() {
-        return likesimage;
-    }
-
-    public void setLikesimage(String likesimage) {
-        this.likesimage = likesimage;
-    }
 
     public String getBookstorethumbnail() {
         return bookstorethumbnail;

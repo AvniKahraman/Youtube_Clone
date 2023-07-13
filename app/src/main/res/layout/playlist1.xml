@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="15dp"
+    android:padding="5dp"
+    android:layout_margin="3dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="120dp">
+
+
+
+        <ImageView
+            android:id="@+id/tamam"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:id="@+id/Fatmanur"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/tamam"
+            android:layout_marginBottom="0dp"
+            android:background="#80FFFFFF" />
+
+
+        <LinearLayout
+            android:layout_width="13dp"
+            android:layout_height="9dp"
+            android:layout_alignTop="@+id/Fatmanur"
+            android:layout_alignBottom="@+id/tamam"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical" >
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/playlist"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"/>
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_below="@id/tamam"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:padding="8dp"
+            android:textColor="#111111"
+            android:textSize="10dp"
+            android:maxLines="1" />
+
+
+        <TextView
+            android:id="@+id/bookvideo"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_below="@id/tamam"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="129dp"
+            android:padding="8dp"
+            android:textColor="#111111"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
