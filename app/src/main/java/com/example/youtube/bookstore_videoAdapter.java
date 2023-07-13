@@ -7,8 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.youtube.R;
+import com.example.youtube.likesvideo;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -42,7 +45,6 @@ public class bookstore_videoAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             return new ViewHolder2(view);
         }
     }
-
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         int viewType = getItemViewType(position);
@@ -52,19 +54,25 @@ public class bookstore_videoAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             if (position / 2 < videoList1.size()) {
                 likesvideo video = videoList1.get(position / 2);
                 Picasso.get().load(video.getLikesimage()).into(viewHolder1.likesimage);
+            } else {
+                viewHolder1.likesimage.setImageDrawable(null); // Görüntüyü temizle
             }
         } else {
             ViewHolder2 viewHolder2 = (ViewHolder2) holder;
-            if (position / 2 < videoList2.size()) {
-                likesvideo video = videoList2.get(position / 2);
+            if ((position - 1) / 2 < videoList2.size()) {
+                likesvideo video = videoList2.get((position - 1) / 2);
                 Picasso.get().load(video.getTamam()).into(viewHolder2.tamam);
+            } else {
+                viewHolder2.tamam.setImageDrawable(null); // Görüntüyü temizle
             }
         }
     }
 
+
+
     @Override
     public int getItemCount() {
-        return (videoList1.size() + videoList2.size()) * 2;
+        return Math.max(videoList1.size(), videoList2.size()) * 2;
     }
 
     public static class ViewHolder1 extends RecyclerView.ViewHolder {
@@ -83,5 +91,10 @@ public class bookstore_videoAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             super(itemView);
             tamam = itemView.findViewById(R.id.tamam);
         }
+    }
+
+    public void setHorizontalScrolling(RecyclerView recyclerView) {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
     }
 }

@@ -113,7 +113,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_marginTop="10dp"
-                android:scrollbars="none">
+                android:scrollbars="none"
+                android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleviewpast"
@@ -175,8 +176,9 @@
             <HorizontalScrollView
                 android:id="@+id/horizontalbooks"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp">
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleviewplaylist"
