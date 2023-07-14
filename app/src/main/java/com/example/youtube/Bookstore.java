@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -178,24 +181,22 @@ public class Bookstore extends AppCompatActivity {
         videoList = parseJson(json);
         videoList2 = parseChannelJson(json2);
         videoList3 = parseChannel(json3);
-        adapter = new Bookstore_past_Adapter(videoList, this);
 
-        RecyclerView recyclerView1 = findViewById(R.id.recycleviewpast);
-        GridLayoutManager layoutManager1 = new GridLayoutManager(this, 1); // 1 sütunlu bir düzen kullanılacak
-        layoutManager1.setOrientation(GridLayoutManager.HORIZONTAL); // Yatay yönde sıralama yapılmasını sağlar
-        recyclerView1.setLayoutManager(layoutManager1);
+        RecyclerView recyclerView = findViewById(R.id.recycleviewpast);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        SnapHelper snapHelper = new LinearSnapHelper();
+        snapHelper.attachToRecyclerView(recyclerView);
         adapter = new Bookstore_past_Adapter(videoList, Bookstore.this);
-        recyclerView1.setAdapter(adapter);
-        recyclerView1.setNestedScrollingEnabled(false); // Dikey kaydırmayı devre dışı bırakma
+        recyclerView.setAdapter(adapter);
 
 
-
-        RecyclerView recyclerView = findViewById(R.id.recycleviewplaylist);
+       /* RecyclerView recyclerView = findViewById(R.id.recycleviewplaylist);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
         recyclerView1.setLayoutManager(layoutManager);
         adapter = new Bookstore_past_Adapter(videoList, this);
         recyclerView.setAdapter(adapter1);
-        recyclerView.setNestedScrollingEnabled(false);
+        recyclerView.setNestedScrollingEnabled(false);*/
 
 
 
