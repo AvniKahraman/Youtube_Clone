@@ -1,19 +1,17 @@
 package com.example.youtube;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintSet;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.LinearSnapHelper;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SnapHelper;
-
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,96 +20,65 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bookstore extends AppCompatActivity {
-
+public class LibraryFragment extends Fragment {
 
     private List<likesvideo> videoList2, videoList3;
     private List<BookStore_video> videoList;
     private Bookstore_past_Adapter adapter;
     private bookstore_videoAdapter adapter1;
 
-
-
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bookstore);
-
-        // ActionBar'ı gizle
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
-
-        LinearLayout historyBar = findViewById(R.id.historyBar);
-        LinearLayout playlistbar = findViewById(R.id.playlistbar);
-        LinearLayout yourVideos = findViewById(R.id.yourVideos);
-        LinearLayout download= findViewById(R.id.download);
-        LinearLayout filmbar = findViewById(R.id.filmbar);
-        LinearLayout patato = findViewById(R.id.patato);
-        ImageView subsImageView = findViewById(R.id.subsImageView);
-        ImageView hp_homePage = findViewById(R.id.hp_homePage);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_bookstore, container, false);
 
 
-
-        hp_homePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Bookstore.this,MainActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
-            }
-        });
-
-        subsImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Bookstore.this,Subscriptions.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right);
-
-            }
-        });
+        LinearLayout historyBar = view.findViewById(R.id.historyBar);
+        LinearLayout playlistbar = view.findViewById(R.id.playlistbar);
+        LinearLayout yourVideos = view.findViewById(R.id.yourVideos);
+        LinearLayout download = view.findViewById(R.id.download);
+        LinearLayout filmbar = view.findViewById(R.id.filmbar);
+        LinearLayout patato = view.findViewById(R.id.patato);
 
         historyBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Bookstore.this, "HistoryBar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "HistoryBar", Toast.LENGTH_SHORT).show();
             }
         });
 
         playlistbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Bookstore.this, "Playlistbar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Playlistbar", Toast.LENGTH_SHORT).show();
             }
         });
 
         yourVideos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Bookstore.this, "Your Videos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Your Videos", Toast.LENGTH_SHORT).show();
             }
         });
 
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Bookstore.this, "Downloads", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Downloads", Toast.LENGTH_SHORT).show();
             }
         });
 
         filmbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Bookstore.this, "FilmBar", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "FilmBar", Toast.LENGTH_SHORT).show();
             }
         });
 
         patato.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Bookstore.this, "Your Clips", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Your Clips", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -182,34 +149,23 @@ public class Bookstore extends AppCompatActivity {
         videoList2 = parseChannelJson(json2);
         videoList3 = parseChannel(json3);
 
-        RecyclerView recyclerView = findViewById(R.id.recycleviewpast);
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
+
+        RecyclerView recyclerView = view.findViewById(R.id.recycleviewpast);
+        GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new Bookstore_past_Adapter(videoList, Bookstore.this);
+        adapter = new Bookstore_past_Adapter(videoList, getActivity());
         recyclerView.setAdapter(adapter);
 
-
-       /* RecyclerView recyclerView = findViewById(R.id.recycleviewplaylist);
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
-        recyclerView1.setLayoutManager(layoutManager);
-        adapter = new Bookstore_past_Adapter(videoList, this);
-        recyclerView.setAdapter(adapter1);
-        recyclerView.setNestedScrollingEnabled(false);*/
-
-
-
-        RecyclerView recyclerView2 = findViewById(R.id.recycleviewplaylist);
-        GridLayoutManager layoutManager2 = new GridLayoutManager(this, 1);
+        RecyclerView recyclerView2 = view.findViewById(R.id.recycleviewplaylist);
+        GridLayoutManager layoutManager2 = new GridLayoutManager(getActivity(), 1);
         recyclerView2.setLayoutManager(layoutManager2);
-        adapter1 = new bookstore_videoAdapter(videoList2, videoList3, this);
+        adapter1 = new bookstore_videoAdapter(videoList2, videoList3, getActivity());
         recyclerView2.setAdapter(adapter1);
-        recyclerView2.setNestedScrollingEnabled(false);
 
-
-
-
-
+        return view;
     }
+
+
     private List<likesvideo> parseChannel(String json3) {
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<likesvideo>>() {}.getType();
@@ -221,7 +177,6 @@ public class Bookstore extends AppCompatActivity {
         Type listType = new TypeToken<ArrayList<likesvideo>>() {}.getType();
         return gson.fromJson(json2, listType);
     }
-
 
     private List<BookStore_video> parseJson(String json) {
         Gson gson = new Gson();
